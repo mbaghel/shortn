@@ -1,0 +1,28 @@
+{
+  "name": "shortn",
+  "version": "0.1.0",
+  "description": "A URL shortening service.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.0.7",
+    "mongoose": "^5.0.17",
+    "valid-url": "^1.0.9"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "url shortening"
+  ]
+}
