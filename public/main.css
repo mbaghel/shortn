@@ -1,0 +1,40 @@
+input[type=url] {
+  font-size: 1em;
+  padding: 12px 20px;
+  margin: 8px -2px 8px 0;
+  display: inline-block;
+  border: 2px inset #ccc;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2196f3;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#submit-url {
+  border-radius: 0 4px 4px 0;
+  margin: 8px 0 8px -3px;
+  transform: translate(0, 6px);
+}
+
+#copy {
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1e88e5;
+}
+
+.hidden {
+  display: none;
+}
+
+#copy-input {
+  position: absolute;
+  left: -10000px;
+}

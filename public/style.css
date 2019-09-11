@@ -3,14 +3,16 @@
 }
 
 body {
-  font-family: Impact, "Trebuchet MS", "Times New Roman", serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   margin: 2em;
-  background-color: #bbdefb;
+  background-color: #ffffff;
 }
 
 h1 {
+  font-family: Impact, "Trebuchet MS", "Times New Roman", serif;
   text-align: center;
   font-size: 3.5em;
+  color: #2196f3;
 }
 
 main {
@@ -23,10 +25,14 @@ main {
 footer {
   position: fixed;
   bottom: 0;
-  margin: 2em;
+  margin: 2em 10%;
 }
 
-code {
-  background-color: #e0e0e0;
-  color: #d32f2f;
+a {
+  color: #b71c1c;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
 }
