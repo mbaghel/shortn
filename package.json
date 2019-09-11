@@ -24,12 +24,8 @@
     "express",
     "mongodb",
     "url shortening"
-<<<<<<< HEAD
   ],
   "devDependencies": {
     "dotenv": "^8.1.0"
   }
-=======
-  ]
->>>>>>> f85540220bc561ee427a50c1b8eb97f338d4acec
 }
