@@ -8,12 +8,12 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "mongodb": "^3.0.7",
-    "mongoose": "^5.0.17",
+    "mongodb": "^3.0.8",
+    "mongoose": "^5.1.0",
     "valid-url": "^1.0.9"
   },
   "engines": {
-    "node": "8.x"
+    "node": "8.11.1"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
@@ -24,8 +24,12 @@
     "express",
     "mongodb",
     "url shortening"
+<<<<<<< HEAD
   ],
   "devDependencies": {
     "dotenv": "^8.1.0"
   }
+=======
+  ]
+>>>>>>> f85540220bc561ee427a50c1b8eb97f338d4acec
 }

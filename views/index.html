@@ -9,7 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- import the webpage's stylesheet -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/main.css">
   </head>
   <body>
     <header>
@@ -19,32 +22,30 @@
     </header>
 
     <main>   
-      <form action="/api/new">
-        <input name="url" type="url" maxlength="1000" placeholder="Enter a URL to shortn" aria-labelledby="submit-URL">
-        <button type="submit" id="submit-url">Submit URL</button>
+      <form id="url-form">
+        <input id="url-input" required name="url" type="url" maxlength="2000" placeholder="Enter a URL to shortn" aria-labelledby="submit-URL">
+        <button type="submit" id="submit-url"><i class="material-icons">done</i></button>
       </form>
-      
-      <section id="instructions">
-        <h2>
-          Usage
-        </h2>  
-        <p>
-          Pass a URL as a parameter to the 'api/new' path to receive a new shortened URL:<br />
-          <code>https://shortn.glitch.me/api/new?url=https://google.com</code><br />
-          will return:<br />
-          <code>{ original_url: https://google.com, short_url: shortn.glitch.me/2 }</code><br />
-          Visit the short URL generated to be redirected to the original URL.<br />
-          (You can also enter a URL in the form above)
-        </p>
-      </section>
+      <div class="hidden">
+        <span id="target"></span>
+        <button id="copy">
+          <i class="material-icons">file_copy</i>
+        </button>
+      </div>
+      <input id="copy-input" tabindex="-1" readonly>
     </main>
 
     <footer>
+      <a href="https://shortn.glitch.me/api/help">Click here for API instructions</a><br />
       Made by <a href="https://michaelbaghel.com" target="_blank">Michael Baghel</a>
     </footer>
     
     
     <!-- import the webpage's client-side javascript file -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <script src="/client.js"></script>
   </body>
 </html>

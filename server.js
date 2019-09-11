@@ -19,16 +19,21 @@ app.get("/", function(request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
 
+// static page for api instructions
+app.get("/api/help", function(req, res) {
+  res.sendFile(__dirname + "/views/help.html");
+});
+
 // handle new url additions
 app.get("/api/new", function(req, res) {
   const url = req.query.url;
-
-  let shortUrl = "";
 
   // check validity of passed url
   if (!validUrl.isWebUri(url)) {
     return res.status(400).send(JSON.stringify({ error: "Invalid URL" }));
   }
+
+  let shortUrl = "";
   // check if url already in database
   const query = Url.findOne({ long_url: url });
 
@@ -36,9 +41,7 @@ app.get("/api/new", function(req, res) {
     // return stored data if found
     if (doc) {
       shortUrl = req.hostname + "/" + base58.encode(doc._id);
-      return res.send(
-        JSON.stringify({ original_url: url, short_url: shortUrl })
-      );
+      return res.send(JSON.stringify({ originalUrl: url, shortUrl: shortUrl }));
     }
 
     // create new entry and return new short url
@@ -47,7 +50,7 @@ app.get("/api/new", function(req, res) {
 
     save.then(function(urlEntry) {
       shortUrl = req.hostname + "/" + base58.encode(urlEntry._id);
-      res.send(JSON.stringify({ original_url: url, short_url: shortUrl }));
+      res.send(JSON.stringify({ originalUrl: url, shortUrl: shortUrl }));
     });
     save.catch(function(err) {
       handleError(err, res);

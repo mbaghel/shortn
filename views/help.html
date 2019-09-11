@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>shortn it!</title>
+    <meta name="description" content="URL shortener API">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/218c5d3b-6015-472e-9837-a64641c5368f%2Ffavicon%20(1).ico?1525695486371" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheets -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/help.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        shortn
+      </h1>
+    </header>
+
+    <main>   
+      <h2>
+        Usage
+      </h2>  
+      <p>
+        Pass a URL as a query to the 'api/new' path to receive a new shortened URL:<br />
+        <code>https://shortn.glitch.me/api/new?url=https://google.com</code><br />
+        will return:<br />
+        <code>{ original_url: https://google.com, short_url: shortn.glitch.me/2 }</code><br />
+        Visit the short URL generated to be redirected to the original URL.<br />
+        (You can also enter a URL in the form above)
+      </p>
+    </main>
+
+    <footer>
+        <a href="https://shortn.glitch.me">Return to front page</a><br />
+        Made by <a href="https://michaelbaghel.com" target="_blank">Michael Baghel</a>
+    </footer>
+    
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js"></script>
+  </body>
+</html>

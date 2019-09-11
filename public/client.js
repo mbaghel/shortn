@@ -1,45 +1,29 @@
-// client-side js
-// run by the browser each time your view template is loaded
-
-(function(){
-  console.log('hello world :o');
+// event handler for form submission
+$("#url-form").submit(function(event) {
+  event.preventDefault();
   
-  // our default array of dreams
-  const dreams = [
-    'Find and count some sheep',
-    'Climb a really tall mountain',
-    'Wash the dishes'
-  ];
+  var longUrl = $("#url-input").val();
+  var apiPath = "https://shortn.glitch.me/api/new?url=" + longUrl;
   
-  // define variables that reference elements on our page
-  const dreamsList = document.getElementById('dreams');
-  const dreamsForm = document.forms[0];
-  const dreamInput = dreamsForm.elements['dream'];
+  var jqxhr = $.get(apiPath, function(data) {
+    var shortUrl = data.shortUrl;
+    $("#copy-input").val(shortUrl);
+    $("#target").html('Short URL: <a href="https://' + shortUrl + '" target="_blank" rel="noopener">' + shortUrl + '</a>')
+  }, "json");
   
-  // a helper function that creates a list item for a given dream
-  const appendNewDream = function(dream) {
-    const newListItem = document.createElement('li');
-    newListItem.innerHTML = dream;
-    dreamsList.appendChild(newListItem);
-  }
-  
-  // iterate through every dream and add it to our page
-  dreams.forEach( function(dream) {
-    appendNewDream(dream);
+  jqxhr.fail(function(error) {
+    var resObj = error.responseJSON;
+    $("#target").html("Error: " + resObj.error);
   });
   
-  // listen for the form to be submitted and add a new dream when it is
-  dreamsForm.onsubmit = function(event) {
-    // stop our form submission from refreshing the page
-    event.preventDefault();
-    
-    // get dream value and add it to the list
-    dreams.push(dreamInput.value);
-    appendNewDream(dreamInput.value);
-  
-    // reset form 
-    dreamInput.value = '';
-    dreamInput.focus();
-  };
-  
-})()
+  jqxhr.always(function() {
+    $(".hidden").slideDown();
+  });
+});
+
+// handler for copy button
+$("#copy").click(function() {
+  $("#copy-input").select();
+  document.execCommand('copy');
+});
+
