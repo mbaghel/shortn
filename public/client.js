@@ -11,7 +11,7 @@ $("#url-form").submit(function(event) {
       var shortUrl = data.shortUrl;
       $("#copy-input").val(shortUrl);
       $("#target").html(
-        'Short URL: <a href="' +
+        'Short URL: <a href="//' +
           shortUrl +
           '" target="_blank" rel="noopener">' +
           shortUrl +
