@@ -2,17 +2,24 @@
 <html lang="en">
   <head>
     <title>shortn it!</title>
-    <meta name="description" content="A basic URL shortener">
-    <link id="favicon" rel="icon" href="https://cdn.glitch.com/218c5d3b-6015-472e-9837-a64641c5368f%2Ffavicon%20(1).ico?1525695486371" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A basic URL shortener" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.com/218c5d3b-6015-472e-9837-a64641c5368f%2Ffavicon%20(1).ico?1525695486371"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/main.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
     <header>
@@ -21,10 +28,20 @@
       </h1>
     </header>
 
-    <main>   
+    <main>
       <form id="url-form">
-        <input id="url-input" required name="url" type="url" maxlength="2000" placeholder="Enter a URL to shortn" aria-labelledby="submit-URL">
-        <button type="submit" id="submit-url"><i class="material-icons">done</i></button>
+        <input
+          id="url-input"
+          required
+          name="url"
+          type="url"
+          maxlength="2000"
+          placeholder="Enter a URL to shortn"
+          aria-labelledby="submit-URL"
+        />
+        <button type="submit" id="submit-url">
+          <i class="material-icons">done</i>
+        </button>
       </form>
       <div class="hidden">
         <span id="target"></span>
@@ -32,20 +49,21 @@
           <i class="material-icons">file_copy</i>
         </button>
       </div>
-      <input id="copy-input" tabindex="-1" readonly>
+      <input id="copy-input" tabindex="-1" readonly />
     </main>
 
     <footer>
-      <a href="https://shortn.glitch.me/api/help">Click here for API instructions</a><br />
-      Made by <a href="https://michaelbaghel.com" target="_blank">Michael Baghel</a>
+      <a href="/api/help">Click here for API instructions</a><br />
+      Made by
+      <a href="https://michaelbaghel.com" target="_blank">Michael Baghel</a>
     </footer>
-    
-    
+
     <!-- import the webpage's client-side javascript file -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="/client.js"></script>
   </body>
 </html>

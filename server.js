@@ -40,7 +40,7 @@ app.get("/api/new", function(req, res) {
   query.then(function(doc) {
     // return stored data if found
     if (doc) {
-      shortUrl = req.hostname + "/" + base58.encode(doc._id);
+      shortUrl = req.get("Host") + "/" + base58.encode(doc._id);
       return res.send(JSON.stringify({ originalUrl: url, shortUrl: shortUrl }));
     }
 
@@ -49,7 +49,7 @@ app.get("/api/new", function(req, res) {
     const save = newUrl.save();
 
     save.then(function(urlEntry) {
-      shortUrl = req.hostname + "/" + base58.encode(urlEntry._id);
+      shortUrl = req.get("Host") + "/" + base58.encode(urlEntry._id);
       res.send(JSON.stringify({ originalUrl: url, shortUrl: shortUrl }));
     });
     save.catch(function(err) {

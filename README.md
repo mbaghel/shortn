@@ -1,5 +1,4 @@
-shortn
-=================
+# shortn
 
 A url shortening service built with express and mongoDB.  
 Includes url validation on the server.  
@@ -10,3 +9,10 @@ Base58 encoding & database models based on [coligio.io project](https://github.c
 
 Made by [Michael Baghel](https://michaelbaghel.com/)
 
+## Running locally
+
+- Clone repo or download and unpack
+- Install dependencies using npm
+- Make sure you have a running Mongo database
+- Add the connection URI for your MongoDB as an environment variable called MONGO_URI
+- 'npm run start' to start the server on localhost

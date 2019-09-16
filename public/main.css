@@ -1,29 +1,26 @@
-input[type=url] {
+i {
+  vertical-align: top;
+}
+
+#url-input {
   font-size: 1em;
   padding: 12px 20px;
-  margin: 8px -2px 8px 0;
   display: inline-block;
   border: 2px inset #ccc;
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
+  margin: 2px;
 }
 
 button {
   background-color: #2196f3;
+  vertical-align: bottom;
   color: white;
-  padding: 9px 20px;
+  padding: 11px 20px;
   border: none;
-  cursor: pointer;
-}
-
-#submit-url {
-  border-radius: 0 4px 4px 0;
-  margin: 8px 0 8px -3px;
-  transform: translate(0, 6px);
-}
-
-#copy {
   border-radius: 4px;
+  cursor: pointer;
+  margin: 2px;
 }
 
 button:hover {
@@ -34,7 +31,15 @@ button:hover {
   display: none;
 }
 
+#target {
+  line-height: 46px;
+}
+
 #copy-input {
   position: absolute;
   left: -10000px;
+}
+
+#url-form {
+  margin-bottom: 2rem;
 }

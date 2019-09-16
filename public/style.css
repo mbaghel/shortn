@@ -4,22 +4,31 @@
 
 body {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  margin: 2em;
+  margin: 0;
+  padding: 2rem;
   background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
-  font-family: Impact, "Trebuchet MS", "Times New Roman", serif;
+  font-family: "Trebuchet MS", "Times New Roman", serif;
   text-align: center;
   font-size: 3.5em;
-  color: #2196f3;
+  color: black;
+  margin: 0;
 }
 
 main {
   position: absolute;
+  max-width: 80vw;
+  min-width: ;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
 }
 
 footer {
