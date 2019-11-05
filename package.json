@@ -9,7 +9,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "mongodb": "^3.0.8",
-    "mongoose": "^5.1.0",
+    "mongoose": "^5.7.5",
     "valid-url": "^1.0.9"
   },
   "engines": {
